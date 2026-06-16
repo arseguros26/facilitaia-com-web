@@ -768,7 +768,7 @@
     <a href="#pilares">Soluciones</a>
     <a href="#como">Cómo funciona</a>
     <a href="#precios">Precios</a>
-    <a href="#precios" class="nav-cta">Empezar gratis</a>
+    <a href="https://app.facilitaia.us" target="_blank" rel="noopener" class="nav-cta">Ingresar a la plataforma</a>
   </nav>
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
@@ -781,7 +781,7 @@
   <a href="#pilares" onclick="closeMobileNav()">Soluciones</a>
   <a href="#como" onclick="closeMobileNav()">Cómo funciona</a>
   <a href="#precios" onclick="closeMobileNav()">Precios</a>
-  <a href="#precios" class="btn-primary" onclick="closeMobileNav()">Empezar gratis</a>
+  <a href="https://app.facilitaia.us" target="_blank" rel="noopener" class="btn-primary" onclick="closeMobileNav()">Ingresar a la plataforma</a>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -799,8 +799,8 @@
     </h1>
     <p class="hero-sub">Automatiza ventas, marketing, operaciones y atención al cliente con inteligencia artificial. Tu equipo hace estrategia; la IA ejecuta.</p>
     <div class="hero-btns">
-      <a href="#precios" class="btn-primary magnetic">Empezar ahora</a>
-      <a href="#como" class="btn-outline magnetic">Ver cómo funciona</a>
+      <a href="https://app.facilitaia.us" target="_blank" rel="noopener" class="btn-primary magnetic">Acceder a la plataforma</a>
+      <a href="#precios" class="btn-outline magnetic">Ver planes</a>
     </div>
   </div>
   <div class="scroll-hint">
@@ -1006,7 +1006,7 @@
     <p class="section-label" style="text-align:center">¿Listo para escalar?</p>
     <h2 class="cta-title reveal">Deja que la IA haga<br><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">el trabajo pesado.</span></h2>
     <p class="cta-sub reveal">Miles de empresas ya automatizan con FacilitaIA. Únete hoy y empieza a crecer desde el día uno.</p>
-    <a href="#precios" class="btn-primary magnetic reveal">Ver planes y empezar →</a>
+    <a href="https://app.facilitaia.us" target="_blank" rel="noopener" class="btn-primary magnetic reveal">Acceder a la plataforma →</a>
   </div>
 </section>
 
@@ -1516,9 +1516,47 @@ if (!prefersReduced) {
   });
 }
 </script>
-<!-- ElevenLabs ConvAI Widget -->
+<!-- ElevenLabs ConvAI Widget — z-index sobre Three.js y cursor personalizado -->
+<style>
+  elevenlabs-convai {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    z-index: 2147483647 !important; /* máximo posible, encima de todo */
+    pointer-events: auto !important;
+  }
+  /* En móvil evitar colisión con scroll-hint u otros flotantes */
+  @media (max-width: 768px) {
+    elevenlabs-convai {
+      bottom: 16px !important;
+      right: 16px !important;
+    }
+  }
+</style>
 <elevenlabs-convai agent-id="agent_5001ktvebnfvfk4sm3h34vmb4yx3"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+<script>
+  /* Evitar que el cursor personalizado tape el widget de ElevenLabs */
+  document.addEventListener('DOMContentLoaded', function() {
+    var checkWidget = setInterval(function() {
+      var widget = document.querySelector('elevenlabs-convai');
+      if (!widget) return;
+      clearInterval(checkWidget);
+      widget.addEventListener('mouseenter', function() {
+        var dot = document.getElementById('cursor-dot');
+        var halo = document.getElementById('cursor-halo');
+        if (dot) dot.style.opacity = '0';
+        if (halo) halo.style.opacity = '0';
+      });
+      widget.addEventListener('mouseleave', function() {
+        var dot = document.getElementById('cursor-dot');
+        var halo = document.getElementById('cursor-halo');
+        if (dot) dot.style.opacity = '1';
+        if (halo) halo.style.opacity = '1';
+      });
+    }, 500);
+  });
+</script>
 
 </body>
 </html>
