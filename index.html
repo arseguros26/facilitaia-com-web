@@ -744,7 +744,8 @@
     }
 
     /* ─── ANIMATIONS ─── */
-    .reveal { opacity: 0; transform: translateY(32px); }
+    /* Solo oculta con opacity; GSAP maneja el translateY vía fromTo */
+    .reveal { opacity: 0; }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -1178,30 +1179,34 @@ if (!prefersReduced) {
     stagger: 0.07,
     delay: .3
   });
-  gsap.from('.hero-eyebrow', { opacity:0, y:20, duration:.8, delay:.15 });
-  gsap.from('.hero-sub', { opacity:0, y:20, duration:.8, delay:.9 });
-  gsap.from('.hero-btns', { opacity:0, y:20, duration:.8, delay:1.1 });
-  gsap.from('.scroll-hint', { opacity:0, duration:1, delay:1.6 });
+  gsap.fromTo('.hero-eyebrow', { opacity:0, y:20 }, { opacity:1, y:0, duration:.8, delay:.15 });
+  gsap.fromTo('.hero-sub',     { opacity:0, y:20 }, { opacity:1, y:0, duration:.8, delay:.9  });
+  gsap.fromTo('.hero-btns',    { opacity:0, y:20 }, { opacity:1, y:0, duration:.8, delay:1.1 });
+  gsap.fromTo('.scroll-hint',  { opacity:0 },       { opacity:1,      duration:1,  delay:1.6 });
 }
 
 /* ══════════════════════════════════════
-   SCROLL REVEAL (all .reveal elements)
-   gsap.to() porque el CSS ya pone opacity:0 — animamos HACIA 1
+   SCROLL REVEAL — fromTo explícito para evitar conflicto con CSS
 ══════════════════════════════════════ */
 gsap.utils.toArray('.reveal').forEach((el, i) => {
   if (!prefersReduced) {
-    gsap.to(el, {
-      opacity: 1,
-      y: 0,
-      duration: .8,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 88%',
-        toggleActions: 'play none none none',
-      },
-      delay: (i % 5) * 0.08
-    });
+    gsap.fromTo(el,
+      { opacity: 0, y: 36 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: .75,
+        ease: 'power2.out',
+        delay: (i % 5) * 0.07,
+        clearProps: 'transform',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+          once: true,
+        }
+      }
+    );
   } else {
     el.style.opacity = '1';
     el.style.transform = 'none';
