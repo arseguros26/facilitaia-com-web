@@ -285,7 +285,7 @@
       border: 1px solid rgba(143,183,255,.14);
       border-radius: 8px;
       background: linear-gradient(180deg, rgba(19,24,52,.24), rgba(8,10,24,.12));
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(6px);
       box-shadow: 0 22px 70px rgba(0,0,0,.24);
       overflow: hidden;
       transform-style: preserve-3d;
@@ -440,7 +440,7 @@
       background:
         linear-gradient(180deg, rgba(143,183,255,.08), rgba(139,124,255,.035)),
         rgba(8,10,24,.34);
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(8px);
       box-shadow: var(--shadow);
       overflow: hidden;
       position: relative;
@@ -554,7 +554,6 @@
       border: 1px solid rgba(143,183,255,.16);
       border-radius: 8px;
       background: rgba(35, 43, 92, .14);
-      backdrop-filter: blur(12px);
       padding: 18px;
       overflow: hidden;
       transform-style: preserve-3d;
@@ -596,7 +595,6 @@
       border: 1px solid rgba(143,183,255,.16);
       border-radius: 8px;
       background: rgba(35, 43, 92, .14);
-      backdrop-filter: blur(12px);
       padding: clamp(20px, 3vw, 30px);
     }
     .compare h3 { margin: 0 0 18px; font-size: clamp(24px, 3vw, 36px); letter-spacing: -.04em; color: transparent; background: linear-gradient(92deg, #f7f4ec, #9ebcff, #a78bfa); -webkit-background-clip: text; background-clip: text; }
@@ -662,7 +660,6 @@
       border: 1px solid rgba(143,183,255,.17);
       border-radius: 8px;
       background: rgba(35, 43, 92, .14);
-      backdrop-filter: blur(14px);
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -711,7 +708,6 @@
       background:
         linear-gradient(135deg, rgba(79,140,255,.14), rgba(139,124,255,.1)),
         rgba(35,43,92,.14);
-      backdrop-filter: blur(14px);
       padding: clamp(30px, 6vw, 72px);
       box-shadow: var(--shadow);
     }
@@ -734,6 +730,13 @@
       color: var(--muted);
     }
     .footer-row { display: flex; justify-content: space-between; gap: 18px; align-items: center; flex-wrap: wrap; }
+    .footer-contact {
+      display: grid;
+      gap: 5px;
+      color: rgba(247,244,236,.72);
+      font-size: 13px;
+      line-height: 1.4;
+    }
     .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
     .footer-links a:hover { color: var(--ink); }
 
@@ -751,7 +754,7 @@
       border: 1px solid rgba(125,227,255,.22);
       border-radius: 8px;
       background: linear-gradient(135deg, rgba(19,24,52,.62), rgba(8,10,24,.38));
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(8px);
       box-shadow: 0 18px 60px rgba(0,0,0,.3), 0 0 28px rgba(52,214,255,.1);
       opacity: 0;
       transform: translateY(18px) scale(.97);
@@ -842,6 +845,7 @@
       .row-score { grid-column: 2; }
       .proof-toast { left: 14px; bottom: 14px; width: min(330px, calc(100vw - 28px)); }
       .footer-row { align-items: flex-start; flex-direction: column; }
+      .footer-contact { font-size: 12px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1029,7 +1033,7 @@
         </div>
 
         <div class="plans">
-          <article class="plan reveal" data-month="199.000" data-year="1.990.000" data-month-link="https://buy.stripe.com/aFa14nfQZ7ES4i1giW3Je0P" data-year-link="https://buy.stripe.com/eVq5kDdIR7ES7ud3wa3Je0Q">
+          <article class="plan reveal" data-month="199.000" data-year="1.990.000" data-month-link="https://buy.stripe.com/fZu8wP6gp0cqcOx7Mq3Je0V" data-year-link="https://buy.stripe.com/14A00jawFgbo8yh8Qu3Je0W">
             <h3>Impulsa</h3>
             <p>Para equipos que quieren ordenar canales y responder más rápido.</p>
             <div class="price"><span>$</span><strong class="amount">199.000</strong><span class="period">COP/mes</span></div>
@@ -1040,10 +1044,10 @@
               <li>Reportes de conversaciones y leads</li>
               <li>Soporte para puesta en marcha</li>
             </ul>
-            <a class="btn btn-secondary plan-link" href="https://buy.stripe.com/aFa14nfQZ7ES4i1giW3Je0P" target="_blank" rel="noopener">Empezar ahora</a>
+            <a class="btn btn-secondary plan-link" href="https://buy.stripe.com/fZu8wP6gp0cqcOx7Mq3Je0V" target="_blank" rel="noopener">Empezar ahora</a>
           </article>
 
-          <article class="plan featured reveal" data-month="399.000" data-year="3.990.000" data-month-link="https://buy.stripe.com/7sYbJ10W56AO7udfeS3Je0R" data-year-link="https://buy.stripe.com/cNi28reMV7EScOx6Im3Je0S">
+          <article class="plan featured reveal" data-month="399.000" data-year="3.990.000" data-month-link="https://buy.stripe.com/7sY00j6gpgbocOxgiW3Je0X" data-year-link="https://buy.stripe.com/3cI28rgV36AOg0J3wa3Je0Y">
             <span class="badge">Más elegido</span>
             <h3>Acelera</h3>
             <p>Para empresas que quieren automatizar ventas, soporte y operación diaria.</p>
@@ -1055,13 +1059,13 @@
               <li>Seguimientos automáticos y scoring</li>
               <li>Dashboards operativos en tiempo real</li>
             </ul>
-            <a class="btn btn-primary plan-link" href="https://buy.stripe.com/7sYbJ10W56AO7udfeS3Je0R" target="_blank" rel="noopener">Empezar ahora</a>
+            <a class="btn btn-primary plan-link" href="https://buy.stripe.com/7sY00j6gpgbocOxgiW3Je0X" target="_blank" rel="noopener">Empezar ahora</a>
           </article>
 
-          <article class="plan reveal" data-month="699.000" data-year="6.990.000" data-month-link="https://buy.stripe.com/bJebJ16gpf7keWF8Qu3Je0T" data-year-link="https://buy.stripe.com/bJe7sLgV30cqbKtc2G3Je0U">
+          <article class="plan reveal" data-month="799.000" data-year="7.990.000" data-month-link="https://buy.stripe.com/00w28r9sB8IW8yh2s63Je0Z" data-year-link="https://buy.stripe.com/00w28r9sB8IW8yh2s63Je0Z">
             <h3>Domina</h3>
             <p>Para operaciones con más volumen, más integraciones y automatizaciones avanzadas.</p>
-            <div class="price"><span>$</span><strong class="amount">699.000</strong><span class="period">COP/mes</span></div>
+            <div class="price"><span>$</span><strong class="amount">799.000</strong><span class="period">COP/mes</span></div>
             <div class="save"></div>
             <ul>
               <li>Agentes multiárea personalizados</li>
@@ -1069,7 +1073,7 @@
               <li>Reglas de escalamiento y auditoría</li>
               <li>Acompañamiento estratégico continuo</li>
             </ul>
-            <a class="btn btn-secondary plan-link" href="https://buy.stripe.com/bJebJ16gpf7keWF8Qu3Je0T" target="_blank" rel="noopener">Empezar ahora</a>
+            <a class="btn btn-secondary plan-link" href="https://buy.stripe.com/00w28r9sB8IW8yh2s63Je0Z" target="_blank" rel="noopener">Empezar ahora</a>
           </article>
         </div>
       </div>
@@ -1093,6 +1097,10 @@
   <footer>
     <div class="container footer-row">
       <div class="brand"><span class="brand-mark">F</span><span>FacilitaIA</span></div>
+      <div class="footer-contact">
+        <span>Bogotá, Colombia · Cra. 13 #83-19</span>
+        <a href="https://wa.me/573123907526" target="_blank" rel="noopener">WhatsApp: 312 390 7526</a>
+      </div>
       <div class="footer-links">
         <a href="https://facilitaia.us/es/privacy" target="_blank" rel="noopener">Privacidad</a>
         <a href="https://facilitaia.us/es/terms" target="_blank" rel="noopener">Términos</a>
@@ -1264,8 +1272,14 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     function initScene() {
       const canvas = document.getElementById("neuralScene");
       if (!canvas || prefersReduced || !window.THREE) return;
-      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: false,
+        alpha: true,
+        powerPreference: "high-performance"
+      });
+      const isSmallScreen = window.innerWidth < 760;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, isSmallScreen ? 1 : 1.25));
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(48, 1, .1, 1000);
       camera.position.set(0, 0, 26);
@@ -1360,12 +1374,20 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
       });
 
       const linePositions = new Float32Array(nodes.length * 6);
+      nodes.forEach((node, i) => {
+        linePositions[i * 6] = 0;
+        linePositions[i * 6 + 1] = 0;
+        linePositions[i * 6 + 2] = 0;
+        linePositions[i * 6 + 3] = node.position.x;
+        linePositions[i * 6 + 4] = node.position.y;
+        linePositions[i * 6 + 5] = node.position.z;
+      });
       const lineGeo = new THREE.BufferGeometry();
       lineGeo.setAttribute("position", new THREE.BufferAttribute(linePositions, 3));
       const lines = new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({ color: 0x34d6ff, transparent: true, opacity: .48 }));
       orbit.add(lines);
 
-      const particleCount = window.innerWidth < 700 ? 220 : 520;
+      const particleCount = window.innerWidth < 700 ? 90 : 220;
       const particlePositions = new Float32Array(particleCount * 3);
       for (let i = 0; i < particleCount; i++) {
         const r = 12 + Math.random() * 18;
@@ -1379,7 +1401,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
       particleGeo.setAttribute("position", new THREE.BufferAttribute(particlePositions, 3));
       const particles = new THREE.Points(
         particleGeo,
-        new THREE.PointsMaterial({ color: 0xbad9ff, size: .042, transparent: true, opacity: .58 })
+        new THREE.PointsMaterial({ color: 0xbad9ff, size: .038, transparent: true, opacity: .42 })
       );
       scene.add(particles);
 
@@ -1388,17 +1410,25 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
       let mode = 0;
       let mouseX = 0;
       let mouseY = 0;
+      let paused = document.hidden;
+      let lastRender = 0;
+      const frameInterval = isSmallScreen ? 1000 / 28 : 1000 / 36;
 
       function resize() {
         width = canvas.clientWidth || window.innerWidth;
         height = canvas.clientHeight || window.innerHeight;
         renderer.setSize(width, height, false);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, width < 760 ? 1 : 1.25));
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
         camera.position.z = width < 700 ? 31 : 26;
       }
       window.addEventListener("resize", resize);
       resize();
+
+      document.addEventListener("visibilitychange", () => {
+        paused = document.hidden;
+      });
 
       window.addEventListener("pointermove", (event) => {
         mouseX = (event.clientX / window.innerWidth - .5) * 2;
@@ -1718,6 +1748,9 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
       }
 
       function animate(time) {
+        requestAnimationFrame(animate);
+        if (paused || time - lastRender < frameInterval) return;
+        lastRender = time;
         const t = time * .001;
         root.rotation.y += (mouseX * .25 - root.rotation.y) * .035;
         root.rotation.x += (-mouseY * .16 - root.rotation.x) * .035;
@@ -1744,17 +1777,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
           node.userData.label.material.opacity = active ? 1 : .78;
         });
 
-        nodes.forEach((node, i) => {
-          linePositions[i * 6] = 0;
-          linePositions[i * 6 + 1] = 0;
-          linePositions[i * 6 + 2] = 0;
-          linePositions[i * 6 + 3] = node.position.x;
-          linePositions[i * 6 + 4] = node.position.y;
-          linePositions[i * 6 + 5] = node.position.z;
-        });
-        lineGeo.attributes.position.needsUpdate = true;
         renderer.render(scene, camera);
-        requestAnimationFrame(animate);
       }
       requestAnimationFrame(animate);
 
