@@ -831,6 +831,28 @@
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    .wa-float {
+      position: fixed;
+      right: 24px;
+      bottom: 104px;
+      z-index: 60;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,.55);
+      animation: waPulse 2.4s ease-out infinite;
+      transition: transform .2s ease;
+    }
+    .wa-float:hover { transform: scale(1.08); }
+    @keyframes waPulse {
+      0% { box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,.55); }
+      70% { box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 16px rgba(37,211,102,0); }
+      100% { box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,0); }
+    }
+
     @media (max-width: 980px) {
       .nav-links {
         position: fixed;
@@ -873,6 +895,7 @@
       .proof-toast { left: 14px; bottom: 14px; width: min(330px, calc(100vw - 28px)); }
       .footer-row { align-items: flex-start; flex-direction: column; }
       .footer-contact { font-size: 12px; }
+      .wa-float { right: 16px; bottom: 96px; width: 54px; height: 54px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1834,6 +1857,9 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
       window.setInterval(showProof, 9200);
     })();
   </script>
+  <a class="wa-float" href="https://wa.me/573138665581?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20FacilitaIA" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16.04 3C8.86 3 3.04 8.82 3.04 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.94 12.94 0 0 0 16.04 29C23.22 29 29 23.18 29 16S23.22 3 16.04 3Zm0 23.62c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.96 1.04 1.06-3.86-.27-.4A10.6 10.6 0 0 1 5.4 16c0-5.86 4.77-10.62 10.64-10.62 5.86 0 10.6 4.76 10.6 10.62 0 5.87-4.74 10.62-10.6 10.62Zm5.83-7.95c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.51-.16-.72.16-.21.32-.83 1.04-1.01 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.14 3.08 1.3 3.3c.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37Z"/></svg>
+  </a>
   <elevenlabs-convai agent-id="agent_5001ktvebnfvfk4sm3h34vmb4yx3"></elevenlabs-convai>
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
