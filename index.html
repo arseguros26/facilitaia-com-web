@@ -291,6 +291,32 @@
       transform-style: preserve-3d;
       animation: floatPanel 6s ease-in-out infinite;
     }
+    .hero-video {
+      justify-self: end;
+      width: min(100%, 340px);
+      animation: floatPanel 6s ease-in-out infinite;
+    }
+    .phone-frame {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      border-radius: 28px;
+      padding: 8px;
+      background: linear-gradient(160deg, rgba(143,183,255,.35), rgba(123,97,255,.18) 45%, rgba(57,200,232,.3));
+      box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px rgba(79,140,255,.18);
+    }
+    .hero-video-el {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 21px;
+      background: #0b0d18;
+    }
+    .video-pill {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
     @keyframes floatPanel {
       0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(-3deg); }
       50% { transform: translateY(-14px) rotateX(2deg) rotateY(3deg); }
@@ -826,6 +852,7 @@
       .mobile-toggle { display: inline-flex; }
       .hero-grid, .demo-shell, .before-after { grid-template-columns: 1fr; }
       .command-panel { justify-self: start; width: 100%; max-width: 560px; }
+      .hero-video { justify-self: center; width: min(100%, 300px); }
       .motors-grid { grid-template-columns: repeat(2, 1fr); }
       .plans { grid-template-columns: 1fr; }
       .plan { min-height: auto; }
@@ -894,35 +921,10 @@
           </div>
         </div>
 
-        <aside class="command-panel reveal" aria-label="Panel de operaciones con IA">
-          <div class="panel-top">
-            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="live-pill">IA EN VIVO</span>
-          </div>
-          <div class="panel-body">
-            <p class="panel-title">Centro de mando <small>+38 acciones hoy</small></p>
-            <div class="pipeline">
-              <div class="pipeline-row" style="--p:82%">
-                <span class="row-icon">W</span>
-                <span class="row-copy"><strong>Lead de WhatsApp calificado</strong><span>Presupuesto enviado y cita agendada.</span></span>
-                <span class="row-score">92%</span>
-              </div>
-              <div class="pipeline-row" style="--p:64%">
-                <span class="row-icon">C</span>
-                <span class="row-copy"><strong>CRM actualizado</strong><span>Oportunidad priorizada por intención de compra.</span></span>
-                <span class="row-score">Alta</span>
-              </div>
-              <div class="pipeline-row" style="--p:76%">
-                <span class="row-icon">S</span>
-                <span class="row-copy"><strong>Soporte resuelto</strong><span>Respuesta generada con contexto del cliente.</span></span>
-                <span class="row-score">12s</span>
-              </div>
-            </div>
-            <div class="panel-foot">
-              <div><strong>1.842</strong><span>mensajes</span></div>
-              <div><strong>316</strong><span>leads</span></div>
-              <div><strong>$48M</strong><span>pipeline</span></div>
-            </div>
+        <aside class="hero-video reveal" aria-label="Video: un asadero atendiendo pedidos por WhatsApp con FacilitaIA">
+          <div class="phone-frame">
+            <video class="hero-video-el" poster="hero-video.jpg" autoplay muted loop playsinline preload="auto" disablepictureinpicture><source src="hero-video.webm" type="video/webm"><source src="hero-video.mp4" type="video/mp4"></video>
+            <span class="live-pill video-pill">IA EN VIVO</span>
           </div>
         </aside>
       </div>
